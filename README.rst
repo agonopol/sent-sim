@@ -4,12 +4,12 @@ Sentence Sim
 
 A small sentence similarity library using lemmatization and word2vec
 
-Sentsim uses the following pipeline for sentense-similiarty:
+Sentsim uses the following pipeline for sentence similarity:
     - data clean -> remove words in brackets, words with numbers
     - tokenize using punkt tokenizer
     - lemmatize the words using the nltk wordnet lemmatization dictionary
     - embed each individual word into a feature word similarity space using the word2vec pre-trained model
-    - average the each setence word2vec vectors to create a feature space
+    - average the each sentence word2vec vectors to create a feature space
     - take the cosine distance between the two sentence vectors to obtain a similarity score between the average embeddings
 
 Analysis
