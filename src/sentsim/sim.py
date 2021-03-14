@@ -51,11 +51,11 @@ class Embedder(object):
 
 def clean(text: str) -> str:
     text = text.lower()
-    text = re.sub(r"[.*?]", "", text)
-    text = re.sub(r"[%s]" % re.escape(string.punctuation), "", text)
-    text = re.sub(r"\w*\d\w*", "", text)
-    text = re.sub(r"[‘’“”…]", "", text)
-    text = re.sub(r"\n", "", text)
+    text = re.sub(r"[.*?]", "", text) # remove anything in brackets
+    text = re.sub(r"[%s]" % re.escape(string.punctuation), "", text) # remove spaces within brackets
+    text = re.sub(r"\w*\d\w*", "", text) # remove words with digits in them
+    text = re.sub(r"[‘’“”…]", "", text) # remove quotes
+    text = re.sub(r"\n", "", text) # strip newlines
     return text
 
 
